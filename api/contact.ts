@@ -19,9 +19,7 @@ export default async function handler(req: any, res: any) {
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
 
   let body = req.body;
-  if (typeof body === 'string') {
-    try { body = JSON.parse(body); } catch {}
-  }
+  if (typeof body === 'string') { try { body = JSON.parse(body); } catch {} }
   const { codename, email, message } = body ?? {};
 
   if (!email || !isEmail(email) || !message) {
@@ -30,8 +28,8 @@ export default async function handler(req: any, res: any) {
 
   try {
     await transporter.sendMail({
-      from: `Tactical Banana Comms <${MAIL_USER}>`,
-      to: 'tacticalbanan@gmail.com',   // change if you want a different inbox
+      from: `Tactical Banana Comms <${MAIL_USER}>`,   // sender must match your Gmail
+      to: 'tacticalbanana2025@gmail.com',            // ✅ corrected recipient
       replyTo: email,
       subject: `Secure Comms from ${codename || 'Anonymous'}`,
       text: `From: ${codename || 'Anonymous'} <${email}>\n\n${message}`,
