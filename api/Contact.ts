@@ -31,7 +31,7 @@ export default async function handler(req: any, res: any) {
   try {
     await transporter.sendMail({
       from: `Tactical Banana Comms <${MAIL_USER}>`,
-      to: 'jamesrlewis1991@gmail.com',   // change if you want a different inbox
+      to: 'tacticalbanan@gmail.com',   // change if you want a different inbox
       replyTo: email,
       subject: `Secure Comms from ${codename || 'Anonymous'}`,
       text: `From: ${codename || 'Anonymous'} <${email}>\n\n${message}`,
