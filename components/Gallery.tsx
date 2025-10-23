@@ -9,13 +9,13 @@ interface IntelImage {
 }
 
 const intelData: IntelImage[] = [
-  { src: '/images/tb-01.jpg', title: 'OP Yellow Mask', description: 'On field comms and full kit in the brush.', width: 1080, height: 1080 },
-  { src: '/images/tb-02.jpg', title: 'Range Admin', description: 'Staging before the brief—optics checked, mags topped.', width: 1080, height: 1080 },
-  { src: '/images/tb-03.jpg', title: 'Mascot Mode', description: 'Tactical banana suit deployed for morale ops.', width: 1080, height: 1080 },
-  { src: '/images/tb-04.jpg', title: 'Overwatch', description: 'High ground, bright rig, eyes on the objective.', width: 1080, height: 1080 },
-  { src: '/images/tb-05.jpg', title: 'HOA Enforcement', description: 'Back plate patch—neighborhood watch turned up to 11.', width: 1080, height: 1080 },
-  { src: '/images/tb-06.jpg', title: 'Long Walk', description: 'Ruck in, radios up; team stepping off.', width: 1080, height: 1080 },
-  { src: '/images/tb-07.jpg', title: 'Indoor Breach', description: 'Stacked kit and a brick wall backdrop—classic.', width: 1080, height: 1080 },
+  { src: '/images/tb-06.jpg', title: 'Plates and Purpose', description: 'Protect the squad, push the line.', width: 1080, height: 1080 },
+  { src: '/images/tb-01.jpg', title: 'Range Admin', description: 'Staging before the brief—optics checked, mags topped.', width: 1080, height: 1080 },
+  { src: '/images/tb-07.jpg', title: 'Mascot Mode', description: 'Tactical banana suit deployed for morale ops.', width: 1080, height: 1080 },
+  { src: '/images/tb-05.jpg', title: 'Overwatch', description: 'High ground, bright rig, eyes on the objective.', width: 1080, height: 1080 },
+  { src: '/images/tb-02.jpg', title: 'HOA Enforcement', description: 'Back plate patch—neighborhood watch turned up to 11.', width: 1080, height: 1080 },
+  { src: '/images/tb-03.jpg', title: 'Long Walk', description: 'Ruck in, radios up; team stepping off.', width: 1080, height: 1080 },
+  { src: '/images/tb-04.jpg', title: 'Indoor Breach', description: 'Stacked kit and a brick wall backdrop—classic.', width: 1080, height: 1080 },
 ];
 
 

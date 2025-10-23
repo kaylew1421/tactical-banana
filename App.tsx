@@ -5,8 +5,10 @@ import Hero from './components/Hero';
 import Profile from './components/Profile';
 import Skills from './components/Skills';
 import MissionLog from './components/MissionLog';
+import EnemyDossier from './components/EnemyDossier';
 import OperationsMap from './components/OperationsMap';
 import Gallery from './components/Gallery';
+import Contact from './components/Contact';
 import Footer from './components/Footer';
 
 const App: React.FC = () => {
@@ -18,8 +20,10 @@ const App: React.FC = () => {
         <Profile />
         <Skills />
         <MissionLog />
+        <EnemyDossier />
         <OperationsMap />
         <Gallery />
+        <Contact />
       </main>
       <Footer />
     </div>

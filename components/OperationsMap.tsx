@@ -38,25 +38,33 @@ const OperationsMap: React.FC = () => {
         <div className="max-w-5xl mx-auto p-4 sm:p-8 bg-gray-800 rounded-lg shadow-2xl">
             <div className="relative">
                 <WorldMapSVG />
-                {missionsData.map((mission, index) => (
-                    <div
-                        key={index}
-                        className="group absolute"
-                        style={{ top: mission.coords.top, left: mission.coords.left }}
-                    >
-                        <div className="absolute w-4 h-4 bg-yellow-400 rounded-full transform -translate-x-1/2 -translate-y-1/2 cursor-pointer animate-pulse"></div>
-                        <div className="absolute w-6 h-6 border-2 border-yellow-400 rounded-full transform -translate-x-1/2 -translate-y-1/2 opacity-75"></div>
+                {missionsData.map((mission, index) => {
+                    const isMostRecent = index === missionsData.length - 1;
+                    return (
+                        <div
+                            key={index}
+                            className="group absolute"
+                            style={{ top: mission.coords.top, left: mission.coords.left }}
+                        >
+                            <div className={`
+                                absolute transform -translate-x-1/2 -translate-y-1/2 
+                                rounded-full bg-yellow-400 cursor-pointer 
+                                animate-glow-yellow
+                                ${isMostRecent ? 'w-4 h-4' : 'w-3 h-3'}
+                            `}>
+                            </div>
 
-                        {/* Tooltip */}
-                        <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-3 w-max max-w-xs p-3 bg-gray-900 text-white text-sm rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none z-10">
-                            <h4 className="font-bold uppercase tracking-wider">{mission.title}</h4>
-                            <span className={`text-xs font-bold uppercase ${
-                                mission.status === 'SUCCESS' || mission.status === 'COMPLETE' ? 'text-green-400' : 'text-yellow-400'
-                            }`}>{mission.status}</span>
-                            <div className="absolute left-1/2 transform -translate-x-1/2 top-full w-0 h-0 border-x-8 border-x-transparent border-t-8 border-t-gray-900"></div>
+                            {/* Tooltip */}
+                            <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-3 w-max max-w-xs p-3 bg-gray-900 text-white text-sm rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none z-10">
+                                <h4 className="font-bold uppercase tracking-wider">{mission.title}</h4>
+                                <span className={`text-xs font-bold uppercase ${
+                                    mission.status === 'SUCCESS' || mission.status === 'COMPLETE' ? 'text-green-400' : 'text-yellow-400'
+                                }`}>{mission.status}</span>
+                                <div className="absolute left-1/2 transform -translate-x-1/2 top-full w-0 h-0 border-x-8 border-x-transparent border-t-8 border-t-gray-900"></div>
+                            </div>
                         </div>
-                    </div>
-                ))}
+                    );
+                })}
             </div>
         </div>
       </div>

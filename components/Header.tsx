@@ -38,7 +38,7 @@ const Header: React.FC = () => {
         <div className="flex items-center justify-between h-16">
           <a href="#" className="flex items-center space-x-2 text-yellow-400 hover:text-yellow-300 transition-colors">
             <BananaIcon className="w-8 h-8"/>
-            <span className="text-xl font-bold tracking-wider uppercase">TGI James</span>
+            <span className="text-xl font-bold tracking-wider uppercase">Tactical Banana</span>
           </a>
           <nav className="hidden md:flex space-x-8">
             {navLinks.map((link) => (
